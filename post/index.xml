@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Fernando Soliva</title>
-    <link>http://fernandosoliva.com/post/</link>
+    <link>https://fernandosolivas.github.io/post/</link>
     <description>Recent content in Posts on Fernando Soliva</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
     <lastBuildDate>Sat, 29 Feb 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://fernandosoliva.com/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://fernandosolivas.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Criando seu pessoal em 3 minutos e de graça</title>
-      <link>http://fernandosoliva.com/post/personal-site-3-minutes/</link>
+      <link>https://fernandosolivas.github.io/post/personal-site-3-minutes/</link>
       <pubDate>Sat, 29 Feb 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://fernandosoliva.com/post/personal-site-3-minutes/</guid>
+      <guid>https://fernandosolivas.github.io/post/personal-site-3-minutes/</guid>
       <description>Quem nunca quis ter um site, currículo ou até mesmo um portfólio todo customizado, com sua cara e só seu? Muitos usam o Wordpress pra atingir esses pontos mas acaba demandando um servidor para rodar ou pagar para que funcione. Aqui, vou explicar como utilizei o Hugo para fazer este site em menos de 3 minutos utilizando, Github Pages e um editor de texto, no meu caso o VSCode.
 Github Pages Caso você não conheça o Github, ele é um versionador de controle de código que utiliza o Git como sistema.</description>
     </item>

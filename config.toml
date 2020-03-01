@@ -1,4 +1,4 @@
-baseURL = "http://fernandosoliva.com/"
+baseURL = "https://fernandosolivas.github.io"
 languageCode = "pt-br"
 title = "Fernando Soliva"
 theme = "hugo-cactus-theme"

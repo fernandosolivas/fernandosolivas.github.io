@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Fernando Soliva">
+
+<meta name="generator" content="Hugo 0.65.3" />
+<title>Criando seu pessoal em 5 minutos e de graça</title>
+<link rel="shortcut icon" href="https://fernandosolivas.github.io/images/favicon.ico">
+<link rel="stylesheet" href="https://fernandosolivas.github.io/css/style.css">
+<link rel="stylesheet" href="https://fernandosolivas.github.io/css/highlight.css">
+
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+
+
+
+
+<meta property="og:title" content="Criando seu pessoal em 5 minutos e de graça" />
+<meta property="og:description" content="Vamos utilizar o Hugo, framework de temas em Go." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://fernandosolivas.github.io/post/personal-site-5-minutes/" />
+<meta property="article:published_time" content="2020-02-29T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-02-29T00:00:00+00:00" />
+
+
+<meta itemprop="name" content="Criando seu pessoal em 5 minutos e de graça">
+<meta itemprop="description" content="Vamos utilizar o Hugo, framework de temas em Go.">
+<meta itemprop="datePublished" content="2020-02-29T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2020-02-29T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="1384">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Criando seu pessoal em 5 minutos e de graça"/>
+<meta name="twitter:description" content="Vamos utilizar o Hugo, framework de temas em Go."/>
+<meta name="twitter:site" content="@https://www.twitter.com/fernandosolivas"/>
+
+
+    </head>
+<body>
+    <nav class="main-nav">
+	
+		<a href='https://fernandosolivas.github.io'> <span class="arrow">←</span>Home</a>
+	
+
+	
+ 		<a href='/about/'>Sobre</a>
+  	
+
+	
+</nav>
+
+    <section id="wrapper">
+        
+        
+<article class="post">
+    <header>
+        <h1>Criando seu pessoal em 5 minutos e de graça</h1>
+        <h2 class="subtitle">Vamos utilizar o Hugo, framework de temas em Go.</h2>
+        <h2 class="headline">
+        February 29, 2020
+        <br>
+        
+        </h2>
+    </header>
+    <section id="post-body">
+        <p>Quem nunca quis ter um site, currículo ou até mesmo um portfólio todo customizado, com sua cara e só seu? Muitos usam o Wordpress pra atingir esses pontos mas acaba demandando um servidor para rodar ou pagar para que funcione. Aqui, vou explicar como utilizei o <a href="https://gohugo.io/">Hugo</a> para fazer este site em menos de 3 minutos utilizando, <a href="https://pages.github.com/">Github Pages</a> e um editor de texto, no meu caso o <a href="https://code.visualstudio.com/">VSCode</a>.</p>
+<h2 id="github-pages">Github Pages</h2>
+<p>Caso você não conheça o <a href="https://github.com/">Github</a>, ele é um versionador de controle de código que utiliza o <a href="https://git-scm.com/">Git</a> como sistema. Caso não conheça um dos dois, aconselho leitura posterior para aprofundamento. Por ora, iremos precisar instalar o Git em sua máquina local e criar uma conta no <a href="https://github.com">Github</a></p>
+<h3 id="instalando-o-git">Instalando o Git</h3>
+<p>Para instalar o Git é bem simples e você pode escolher qual versão você quer. Seja <a href="https://git-scm.com/download/win">Windows</a>, <a href="https://git-scm.com/download/mac">Mac OS X</a> ou <a href="https://git-scm.com/download/linux">Linux</a>.</p>
+<p>Após instalar, será necessário realizar algumas configurações básicas. Abra o terminal do seu sistema operacional e execute o comando abaixo.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ git config --global user.email <span style="color:#e6db74">&#34;seuemail@dominio.com&#34;</span>
+
+$ git config --global user.name <span style="color:#e6db74">&#34;Seu Nome&#34;</span>
+</code></pre></div><p>Pronto, seu cliente Git está configurado!</p>
+<h3 id="criando-sua-conta-no-github">Criando sua conta no Github</h3>
+<p>Acesse o <a href="https://github.com">Github</a>, clique em <strong>Sign Up</strong>  para criar uma conta.</p>
+<p><img src="/github-signup.png" alt="signup"></p>
+<p>Em seguida crie sua conta preenchendo o formulário e selecione o plano gratuito do Github.</p>
+<p><img src="/gh-create-account-form.png" alt="gh-create-account-form"></p>
+<p>E&hellip; Shazaam!! Sua conta está criada, mas não feche o Github agora, já já iremos precisar dele! :)</p>
+<h2 id="go">Go</h2>
+<p>Instale  o <a href="https://golang.org/dl/">Go</a> na sua máquina antes de prosseguir. Iremos precisar dele para instalar e executar o próximo passo.</p>
+<h2 id="hugo">Hugo</h2>
+<p>Hugo é um framework em <a href="http://golang.org/">go</a> feito para criar sites através de templates, abstraindo o máximo possível de lógica. Você pode criar um template e disponibilizar na comunidade para que outras pessoas possam usar. Logo, outras pessoas (bem legais) já criaram templates para que possamos usar. Se quiser dar uma olhada nas opções, você pode encontrar clicando <a href="https://themes.gohugo.io/">aqui</a>.</p>
+<p>Lembre-se, antes de instalar/rodar o Hugo, você precisará ter o <a href="http://golang.org/">go</a> instalado!</p>
+<h3 id="iniciando-nosso-site">Iniciando nosso site</h3>
+<p>A primeira coisa que a gente vai precisar fazer é criar um repositório no Github. Um repositório é um &ldquo;diretório&rdquo; na nuvem com histórico e apartir desse histórico é possível fazer um monte de coisa. Então, na sua página inicial do Github, clique no botão de verde no canto esquerdo pra criar um novo repositório, como a imagem abaixo.</p>
+<p><img src="/gh-create-repository.png" alt="gh-create-repo"></p>
+<p>No formulário para criar um novo repositório, você <em>deve</em> criar um repositório no formato <em>nomedasuaconta.github.io</em>, caso contrário não irá funcionar.</p>
+<p><img src="/gh-create-repository-pages.png" alt="gh-create-repo-pages"></p>
+<p>Em seguida, você será redirecionado para uma página com um tutorial para você começar a modificar seu repositório.</p>
+<p><img src="/gh-create-repository-feedback.png" alt="gh-create-repo-feedback"></p>
+<p>Nós vamos utilizar o primeiro exemplo e iremos começar a realizar nossas edições com o Hugo.</p>
+<h2 id="utilizando-nosso-repositório-como-site">Utilizando nosso repositório como site</h2>
+<p>Agora, abra a linha de comando do seu sistema operacional e execute o comando</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ git clone https://github.com/&lt;nomedoseurepositorio&gt;/&lt;nomedoseurepositorio&gt;.github.io.git
+</code></pre></div><p>O git por padrão irá solicitar sua senha de acesso ao Github. Relaxa, isso é normal. Digite sua senha e logo você verá que uma pasta foi criada com o <em>nomedoseurepositorio</em>.</p>
+<p>Entre nessa passata e iremos começar a realizar a mágica.</p>
+<h2 id="instalando-o-hugo">Instalando o Hugo</h2>
+<p>Primeiro nós vamos instalar o Hugo, você precisará ter instalado o <a href="http://golang.org/">go</a>1.11+ e o Git. Esses são os únicos pré requisitos. Agora execute no seu terminal uma dessas opcões.</p>
+<h4 id="mac-os">Mac OS</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ brew install hugo
+</code></pre></div><h4 id="linux">Linux</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ brew install hugo
+</code></pre></div><p>*Caso não tenha o <a href="https://docs.brew.sh/Homebrew-on-Linux">Homebrew</a> instalado no Linux, instale antes.</p>
+<h4 id="windows">Windows</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ choco install hugo -confirm
+</code></pre></div><p>*Caso não tenha o <a href="https://chocolatey.org/">Chocolatey</a> instalado no Windows, instale antes.</p>
+<h2 id="rodando-hugo">Rodando Hugo</h2>
+<p>Após a instalação ter sido concluída, nós vamos conseguir executar no terminal o seguinte comando para criarmos nossos site.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ hugo new site . --force
+</code></pre></div><p>O argumento <em>&ndash;force</em> é necessário pois o diretório já existe e o Hugo para confirmamos que queremos escrever nessa pasta de destino. Após executar você deve ter a seguinte estrutura:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$
+├── archetypes
+│   └── default.md
+├── config.toml
+├── content
+├── data
+├── layouts
+├── static
+└── themes
+</code></pre></div><h4 id="escolhendo-um-tema">Escolhendo um tema</h4>
+<p>Essa é uma estrutura base do framework que não precisamos nos preocupar agora. Vamos escolher um tema na <a href="https://themes.gohugo.io/">página da comunidade</a>. Eu irei utilizar o tema <a href="https://themes.gohugo.io/cactus/">Cactus</a>.</p>
+<p>Na raiz do nosso projeto, vamos executar os dois comandos abaixo:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ cd themes
+$ git clone https://github.com/digitalcraftsman/hugo-cactus-theme.git
+</code></pre></div><p>Isso fará com que a gente baixe o tema Cactus para nosso repositório e possamos customizar ele. Repare que na raiz do seu projeto, existe um arquivo chamado <code>config.toml</code>. Iremos adicionar uma linha indicando qual tema iremos usar. O arquivo deverá ficar assim:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">baseURL <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;http://example.org/&#34;</span> &lt;- modifique esse valor para https://&lt;seurepositorio.github.io&gt;
+languageCode <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;en-us&#34;</span>
+title <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;My New Hugo Site&#34;</span>
+theme <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;hugo-cactus-theme&#34;</span>
+</code></pre></div><p>Agora, iremos executar na raiz do projeto o seguinte comando <code>hugo server</code>. Isso fará rodar um servidor local para que você possa ver uma prévia do seu site. No momento, só teremos um exemplo pois ainda não alteramos nada. Se você acessar pelo navegador a url: http://localhost:1313 verá uma página similar a essa</p>
+<p><img src="/cactus-boilerplate.png" alt="boilerplate"></p>
+<p>Ótimo, agora já temos algo visual! Precisamos agora customizar conforme preferirmos para deixar nosso site mais bonito. Existem muitas formas de customizar o tema Cactus. Podemos ver mais detalhes clicando <a href="https://github.com/digitalcraftsman/hugo-cactus-theme">aqui</a>.</p>
+<h4 id="customizando-nosso-tema">Customizando nosso tema</h4>
+<p>Primeira alteração que iremos fazer é copiar para a raiz do nosso projeto, um arquivo chamado <code>config.toml</code>(sim, igual o seu) que está em ./themes/exampleSite. Esse arquivo já contém muitas opções de configuração e lá você já pode alterar o nome, título, descrição e outros.</p>
+<p>Nós iremos configurar juntos uma seção, que é a de <em>social</em>. No fim do arquivo iremos adicionar o seguinte conteúdo:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">[</span>social<span style="color:#f92672">]</span>
+    twitter  <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;https://www.twitter.com/fernandosolivas&#34;</span>
+    github   <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;https://www.github.com/fernandosolivas&#34;</span>
+	linkedin <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;https://www.linkedin.com/in/fernandosoliva/&#34;</span>
+	medium <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;https://medium.com/fernandosolivas&#34;</span>
+</code></pre></div><p>E escolha uma foto bem legal para colocar no centro do página, você precisará movê-la para ./themes/static/images/avatar.png. Tem que ter o mesmo nome, senão não irá funcionar.</p>
+<p>No fim, teremos algo assim.</p>
+<p><img src="/cactus-boilerplate-edited.png" alt="cactus-boilerplate-edited"></p>
+<h4 id="adicionando-mais-informações">Adicionando mais informações</h4>
+<p>Agora, nossa página está um pouco crua ainda, então vamos adicionar uma página com uma descrição sobre a gente. O framework Hugo espera que todas as páginas criadas estejam dentro da pasta <!-- raw HTML omitted -->/content, então vamos criar uma pasta chamada about e arquivo chamado <code>_index.md</code> dentro da nova pasta criada.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">├── archetypes
+│   └── default.md
+├── config.toml
+├── content
+│   └── about
+│       └── _index.md
+...
+</code></pre></div><p>Você pode não estar familiarizado mas esse sufixo de arquivo <code>.md</code> representa um arquivo do tipo <a href="https://en.wikipedia.org/wiki/Markdown">Markdown</a> e <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">aqui</a> tem uma lista de exemplos de como se pode usar.</p>
+<p>Vamos começar editando o arquivo e adicionando o seguinte texto no topo do arquivo:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">+++
+date <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;2015-06-20T14:02:37+02:00&#34;</span>
+title <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Sobre&#34;</span>
+hidden <span style="color:#f92672">=</span> false
+menu <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;main&#34;</span>
++++
+</code></pre></div><p>Cada item é auto explicativo mas vamos dar uma passada por eles:</p>
+<ul>
+<li>Date: Data de publicação da página</li>
+<li>Title: Título / Nome da página</li>
+<li>Hidden: Se deverá aparecer no menu</li>
+<li>Menu: Em qual menu ele deverá estar relacionado</li>
+</ul>
+<p>Depois disso só nos resta começar a escrever, o meu arquvio <code>_index.md</code> fica assim:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">+++
+date <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;2015-06-20T14:02:37+02:00&#34;</span>
+title <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Sobre&#34;</span>
+hidden <span style="color:#f92672">=</span> true
+menu <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;main&#34;</span>
++++
+
+Software Developer na <span style="color:#f92672">[</span>Calindra<span style="color:#f92672">](</span>https://calindra.tech/<span style="color:#f92672">)</span>, Coordenador <span style="color:#66d9ef">do</span> <span style="color:#f92672">[</span>Meetup GopheRio<span style="color:#f92672">](</span>https://www.meetup.com/pt-BR/GopheRio<span style="color:#f92672">)</span>, voluntário no <span style="color:#f92672">[</span>Poder <span style="color:#66d9ef">do</span> Voto<span style="color:#f92672">](</span>https://poderdovoto.org<span style="color:#f92672">)</span>, Fundador da <span style="color:#f92672">[</span>Simbah<span style="color:#f92672">](</span>https://www.simbahdc.com/<span style="color:#f92672">)</span>, escritor nas horas vagas e pai de uma menina incrível e marido da melhor ilustradora <span style="color:#66d9ef">do</span> país <span style="color:#f92672">[</span>link<span style="color:#f92672">](</span>https://www.instagram.com/aruizilustra/<span style="color:#f92672">)</span>!
+
+Gosto de desenvolver em muitas linguagens e utilizar cada uma delas para seu propósito correto. As linguagens que tenho mais conhecimento são: Java, Go, Python, JavaScript <span style="color:#f92672">(</span>TypeScript<span style="color:#f92672">)</span>.
+
+Entusiasta de TDD, Clean Code, CI e CD e boas práticas de desenvolvimento.
+
+***
+
+</code></pre></div><h4 id="disponibilizando-nosso-site-na-internet">Disponibilizando nosso site na internet</h4>
+<p>Agora, de volta ao Git. Vamos mandar as alterações que fizemos nos arquivos lá para o repositório que criamos. Para isso iremos executar os seguintes comandos na raiz do projeto.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ hugo -d .
+$ git add *
+$ git commit -m <span style="color:#e6db74">&#34;Enviando site com descrição&#34;</span>
+$ git push origin master
+</code></pre></div><p>Agora se você acessar https://&lt;seurepositorio.github.io&gt; você verá seus site online, de graça e sem precisar escrever 1 linha de código, somente textos.</p>
+<h4 id="conclusão">Conclusão</h4>
+<p>Existem algumas formas de se criar um site de forma gratuita sem precisar escrever código, como wix.com, wordpress* e outros. O Hugo é uma boa ferramenta pra quem já programa ou está começando pois requer pouco (ou nenhum) conhecimento em desenvolvimento e ferramentas para já conseguir fazer um site.</p>
+<p>O Hugo tem vários temas incríveis e fácis de usar, se quiser ir tentando modificar o seu, vai fundo!</p>
+<p>Espero que tenha gostado do post e mande suas dúvidas no meu twitter.</p>
+<p>Até a próxima!</p>
+
+    </section>
+</article>
+
+<footer id="post-meta" class="clearfix">
+    <a href="https://twitter.com/fernandosolivas">
+    <img class="avatar" src="https://fernandosolivas.github.io/images/avatar.png">
+    <div>
+        <span class="dark">Fernando Soliva</span>
+        <span>Fernando Soliva - Desenvolvedor de Software</span>
+    </div>
+    </a>
+    <section id="sharing">
+        <a class="twitter" href="https://twitter.com/intent/tweet?text=https%3a%2f%2ffernandosolivas.github.io%2fpost%2fpersonal-site-5-minutes%2f - Criando%20seu%20pessoal%20em%205%20minutos%20e%20de%20gra%c3%a7a by @fernandosolivas"><span class="icon-twitter"> tweet</span></a>
+
+<a class="facebook" href="#" onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+      'facebook-share-dialog',
+      'width=626,height=436');
+    return false;"><span class="icon-facebook-rect"> Share</span>
+</a>
+
+    </section>
+</footer>
+
+
+
+<ul id="post-list" class="archive readmore">
+    <h3>Read more</h3>
+
+    
+    
+    
+</ul>
+
+
+
+        <footer id="footer">
+    
+        <div id="social">
+
+	
+	
+    <a class="symbol" href="https://www.github.com/fernandosolivas">
+        <i class="fa fa-github"></i>
+    </a>
+    
+    <a class="symbol" href="https://www.linkedin.com/in/fernandosoliva/">
+        <i class="fa fa-linkedin"></i>
+    </a>
+    
+    <a class="symbol" href="https://dev.to/fernandosolivas">
+        <i class="fa fa-medium"></i>
+    </a>
+    
+    <a class="symbol" href="https://www.twitter.com/fernandosolivas">
+        <i class="fa fa-twitter"></i>
+    </a>
+    
+
+
+</div>
+
+    
+    <p class="small">
+    
+        © Copyright 2020 Fernando Soliva
+    
+    </p>
+</footer>
+
+    </section>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://fernandosolivas.github.io/js/main.js"></script>
+<script src="https://fernandosolivas.github.io/js/highlight.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+</body>
+</html>

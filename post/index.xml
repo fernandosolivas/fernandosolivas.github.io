@@ -12,11 +12,11 @@
     
     
     <item>
-      <title>Criando seu pessoal em 3 minutos e de graça</title>
-      <link>https://fernandosolivas.github.io/post/personal-site-3-minutes/</link>
+      <title>Criando seu pessoal em 5 minutos e de graça</title>
+      <link>https://fernandosolivas.github.io/post/personal-site-5-minutes/</link>
       <pubDate>Sat, 29 Feb 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://fernandosolivas.github.io/post/personal-site-3-minutes/</guid>
+      <guid>https://fernandosolivas.github.io/post/personal-site-5-minutes/</guid>
       <description>Quem nunca quis ter um site, currículo ou até mesmo um portfólio todo customizado, com sua cara e só seu? Muitos usam o Wordpress pra atingir esses pontos mas acaba demandando um servidor para rodar ou pagar para que funcione. Aqui, vou explicar como utilizei o Hugo para fazer este site em menos de 3 minutos utilizando, Github Pages e um editor de texto, no meu caso o VSCode.
 Github Pages Caso você não conheça o Github, ele é um versionador de controle de código que utiliza o Git como sistema.</description>
     </item>

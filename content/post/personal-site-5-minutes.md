@@ -8,7 +8,7 @@ categories = [
 ]
 +++
 
-Quem nunca quis ter um site, currículo ou até mesmo um portfólio todo customizado, com sua cara e só seu? Muitos usam o Wordpress pra atingir esses pontos mas acaba demandando um servidor para rodar ou pagar para que funcione. Aqui, vou explicar como utilizei o [Hugo](https://gohugo.io/) para fazer este site em menos de 3 minutos utilizando, [Github Pages](https://pages.github.com/) e um editor de texto, no meu caso o [VSCode](https://code.visualstudio.com/).
+Quem nunca quis ter um site, currículo ou até mesmo um portfólio todo customizado, com sua cara e só seu? Muitos usam o Wordpress pra atingir esses pontos mas acaba demandando um servidor para rodar ou pagar para que funcione. Aqui, vou explicar como utilizei o [Hugo](https://gohugo.io/) para fazer este site em menos de 5 minutos utilizando, [Github Pages](https://pages.github.com/) e um editor de texto, no meu caso o [VSCode](https://code.visualstudio.com/).
 
 ## Github Pages
 Caso você não conheça o [Github](https://github.com/), ele é um versionador de controle de código que utiliza o [Git](https://git-scm.com/) como sistema. Caso não conheça um dos dois, aconselho leitura posterior para aprofundamento. Por ora, iremos precisar instalar o Git em sua máquina local e criar uma conta no [Github](https://github.com)

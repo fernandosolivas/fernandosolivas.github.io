@@ -216,6 +216,7 @@ Entusiasta de TDD, Clean Code, CI e CD e boas práticas de desenvolvimento.
 Agora, de volta ao Git. Vamos mandar as alterações que fizemos nos arquivos lá para o repositório que criamos. Para isso iremos executar os seguintes comandos na raiz do projeto.
 
 ```bash
+$ hugo -d .
 $ git add *
 $ git commit -m "Enviando site com descrição"
 $ git push origin master

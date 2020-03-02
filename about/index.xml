@@ -2,13 +2,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Sobre on Fernando Soliva</title>
-    <link>https://fernandosolivas.github.io/about/</link>
+    <link>https://fernandosoliva.com/about/</link>
     <description>Recent content in Sobre on Fernando Soliva</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
     <lastBuildDate>Sat, 20 Jun 2015 14:02:37 +0200</lastBuildDate>
     
-	<atom:link href="https://fernandosolivas.github.io/about/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://fernandosoliva.com/about/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>

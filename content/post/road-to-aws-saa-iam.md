@@ -169,16 +169,16 @@ Como dito anteriormente, você pode configurar funções para que terceiros tenh
 
 Existem 4 tipos de entidades de funções:
 
-- Serviço da AWS: _Dá permissão a um serviço executar ações em seu nome. e.g: Instância EC2 escreva em um bucket do S3._
-- Outra conta AWS: _Dá permissão a uma outra conta executar ações na sua conta. e.g: Uma prestadora de serviço conectar a um banco do RDS de fora da sua conta._
-- Identidade da web: _Permite que os usuários federados pela identidade da Web externa especificada ou pelo provedor OpenID Connect (OIDC) assumam essa função para executar ações em sua conta_
-- Federação do SAML 2.0: _Permite que os usuários que são federados com o SAML 2.0 assumam essa função para executar ações em sua conta_
+- *Serviço da AWS*: _Dá permissão a um serviço executar ações em seu nome. e.g: Instância EC2 escreva em um bucket do S3._
+- *Outra conta AWS*: _Dá permissão a uma outra conta executar ações na sua conta. e.g: Uma prestadora de serviço conectar a um banco do RDS de fora da sua conta._
+- *Identidade da web*: _Permite que os usuários federados pela identidade da Web externa especificada ou pelo provedor OpenID Connect (OIDC) assumam essa função para executar ações em sua conta_
+- *Federação do SAML 2.0*: _Permite que os usuários que são federados com o SAML 2.0 assumam essa função para executar ações em sua conta_
 
 O processo de adicionar políticas a funções é bem similar ao de adicionar à usuários, por isso não irei repetir os passos para ficarmos menos repetitivos.
 
 ## Lembretes
 
-- IAM é Globais, ou seja, um usuário, função, grupo ou política criado no IAM poderá acessar todas as regiões da AWS.
+- IAM é global, ou seja, não tem região específica e um usuário, função, grupo ou política criado no IAM poderá acessar todas as regiões da AWS.
 - A conta "root" é a conta que foi criada a primeira vez. Essa conta tera acesso de Administrador completo (o famoso _God Mode_).
 - Usuários não tem permissões quando criados.
 - Usuários recem criados deverão ter acesso de console ou acesso programático.

@@ -31,7 +31,7 @@
 <meta itemprop="description" content="Vamos aprender conceitos e realizar exercícios práticos de fixação.">
 <meta itemprop="datePublished" content="2020-03-02T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2020-03-02T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="1603">
+<meta itemprop="wordCount" content="1608">
 
 
 
@@ -174,15 +174,15 @@
 <p>Como dito anteriormente, você pode configurar funções para que terceiros tenham acesso a sua conta da AWS e a seus recursos.</p>
 <p>Existem 4 tipos de entidades de funções:</p>
 <ul>
-<li>Serviço da AWS: <em>Dá permissão a um serviço executar ações em seu nome. e.g: Instância EC2 escreva em um bucket do S3.</em></li>
-<li>Outra conta AWS: <em>Dá permissão a uma outra conta executar ações na sua conta. e.g: Uma prestadora de serviço conectar a um banco do RDS de fora da sua conta.</em></li>
-<li>Identidade da web: <em>Permite que os usuários federados pela identidade da Web externa especificada ou pelo provedor OpenID Connect (OIDC) assumam essa função para executar ações em sua conta</em></li>
-<li>Federação do SAML 2.0: <em>Permite que os usuários que são federados com o SAML 2.0 assumam essa função para executar ações em sua conta</em></li>
+<li><em>Serviço da AWS</em>: <em>Dá permissão a um serviço executar ações em seu nome. e.g: Instância EC2 escreva em um bucket do S3.</em></li>
+<li><em>Outra conta AWS</em>: <em>Dá permissão a uma outra conta executar ações na sua conta. e.g: Uma prestadora de serviço conectar a um banco do RDS de fora da sua conta.</em></li>
+<li><em>Identidade da web</em>: <em>Permite que os usuários federados pela identidade da Web externa especificada ou pelo provedor OpenID Connect (OIDC) assumam essa função para executar ações em sua conta</em></li>
+<li><em>Federação do SAML 2.0</em>: <em>Permite que os usuários que são federados com o SAML 2.0 assumam essa função para executar ações em sua conta</em></li>
 </ul>
 <p>O processo de adicionar políticas a funções é bem similar ao de adicionar à usuários, por isso não irei repetir os passos para ficarmos menos repetitivos.</p>
 <h2 id="lembretes">Lembretes</h2>
 <ul>
-<li>IAM é Globais, ou seja, um usuário, função, grupo ou política criado no IAM poderá acessar todas as regiões da AWS.</li>
+<li>IAM é global, ou seja, não tem região específica e um usuário, função, grupo ou política criado no IAM poderá acessar todas as regiões da AWS.</li>
 <li>A conta &ldquo;root&rdquo; é a conta que foi criada a primeira vez. Essa conta tera acesso de Administrador completo (o famoso <em>God Mode</em>).</li>
 <li>Usuários não tem permissões quando criados.</li>
 <li>Usuários recem criados deverão ter acesso de console ou acesso programático.</li>

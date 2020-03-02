@@ -1,6 +1,6 @@
 +++
-title = "Criando seu site em 5 minutos e de graça"
-description = "Vamos utilizar o Hugo, framework de temas em Go."
+title = "Caminho para certificação AWS Solutions Architect Associate - Pt.1"
+description = "Vamos aprender conceitos e realizar exercícios práticos de fixação."
 date = "2020-02-29"
 hidden = true
 categories = [

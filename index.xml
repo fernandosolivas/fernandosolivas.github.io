@@ -12,6 +12,16 @@
     
     
     <item>
+      <title>Caminho para certificação AWS Solutions Architect Associate - Pt.1</title>
+      <link>https://fernandosoliva.com/post/road-to-aws-saa-iam/</link>
+      <pubDate>Sat, 29 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://fernandosoliva.com/post/road-to-aws-saa-iam/</guid>
+      <description>Esse é o primeiro post da trilha de estudo que irei seguir até meu certificado da AWS de Solutions Architect Associate. São notas e explicações que espero me ajudar até o momento da prova e espero que ajude outras pessoas também!
+Identity and Access Management (IAM) O primeiro serviço de estudo é o Identity and Access Management (IAM). Este serviço prove interface para administração de: usuários (users), grupos (groups), funcões (roles) e políticas (policies) e tem as seguintes características:</description>
+    </item>
+    
+    <item>
       <title>Criando seu site em 5 minutos e de graça</title>
       <link>https://fernandosoliva.com/post/personal-site-5-minutes/</link>
       <pubDate>Sat, 29 Feb 2020 00:00:00 +0000</pubDate>
@@ -19,16 +29,6 @@
       <guid>https://fernandosoliva.com/post/personal-site-5-minutes/</guid>
       <description>Quem nunca quis ter um site, currículo ou até mesmo um portfólio todo customizado, com sua cara e só seu? Muitos usam o Wordpress pra atingir esses pontos mas acaba demandando um servidor para rodar ou pagar para que funcione. Aqui, vou explicar como utilizei o Hugo para fazer este site em menos de 5 minutos utilizando, Github Pages e um editor de texto, no meu caso o VSCode.
 Github Pages Caso você não conheça o Github, ele é um versionador de controle de código que utiliza o Git como sistema.</description>
-    </item>
-    
-    <item>
-      <title>Criando seu site em 5 minutos e de graça</title>
-      <link>https://fernandosoliva.com/post/road-to-aws-saa-iam/</link>
-      <pubDate>Sat, 29 Feb 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://fernandosoliva.com/post/road-to-aws-saa-iam/</guid>
-      <description>Esse é o primeiro post da trilha de estudo que irei seguir até meu certificado da AWS de Solutions Architect Associate. São notas e explicações que espero me ajudar até o momento da prova e espero que ajude outras pessoas também!
-Identity and Access Management (IAM) O primeiro serviço de estudo é o Identity and Access Management (IAM). Este serviço prove interface para administração de: usuários (users), grupos (groups), funcões (roles) e políticas (policies) e tem as seguintes características:</description>
     </item>
     
   </channel>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Fernando Soliva">
+
+<meta name="generator" content="Hugo 0.65.3" />
+<title>Criando seu site em 5 minutos e de graça</title>
+<link rel="shortcut icon" href="https://fernandosoliva.com/images/favicon.ico">
+<link rel="stylesheet" href="https://fernandosoliva.com/css/style.css">
+<link rel="stylesheet" href="https://fernandosoliva.com/css/highlight.css">
+
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+
+
+
+
+<meta property="og:title" content="Criando seu site em 5 minutos e de graça" />
+<meta property="og:description" content="Vamos utilizar o Hugo, framework de temas em Go." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://fernandosoliva.com/post/road-to-aws-saa-iam/" />
+<meta property="article:published_time" content="2020-02-29T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-02-29T00:00:00+00:00" />
+
+
+<meta itemprop="name" content="Criando seu site em 5 minutos e de graça">
+<meta itemprop="description" content="Vamos utilizar o Hugo, framework de temas em Go.">
+<meta itemprop="datePublished" content="2020-02-29T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2020-02-29T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="201">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Criando seu site em 5 minutos e de graça"/>
+<meta name="twitter:description" content="Vamos utilizar o Hugo, framework de temas em Go."/>
+<meta name="twitter:site" content="@https://www.twitter.com/fernandosolivas"/>
+
+
+    </head>
+<body>
+    <nav class="main-nav">
+	
+		<a href='https://fernandosoliva.com'> <span class="arrow">←</span>Home</a>
+	
+
+	
+ 		<a href='/about/'>Sobre</a>
+  	
+
+	
+</nav>
+
+    <section id="wrapper">
+        
+        
+<article class="post">
+    <header>
+        <h1>Criando seu site em 5 minutos e de graça</h1>
+        <h2 class="subtitle">Vamos utilizar o Hugo, framework de temas em Go.</h2>
+        <h2 class="headline">
+        February 29, 2020
+        <br>
+        
+        </h2>
+    </header>
+    <section id="post-body">
+        <p>Esse é o primeiro post da trilha de estudo que irei seguir até meu certificado da AWS de Solutions Architect Associate. São notas e explicações que espero me ajudar até o momento da prova e espero que ajude outras pessoas também!</p>
+<h4 id="identity-and-access-management-iam">Identity and Access Management (IAM)</h4>
+<p>O primeiro serviço de estudo é o Identity and Access Management (IAM). Este serviço prove interface para administração de: usuários (users), grupos (groups), funcões (roles) e políticas (policies) e tem as seguintes características:</p>
+<ul>
+<li>Controle centralizado da sua conta AWS</li>
+<li>Acesso compartilhado da sua conta AWs</li>
+<li>Permissões granulares</li>
+<li>Federação de Identidade (Active Directory, Facebook, LinkedIn, etc.)</li>
+<li>Autenticação Multi Fator (MFA)</li>
+<li>Regras de rotação de senhas</li>
+<li>Integração com muitos serviços da AWS</li>
+<li><a href="https://www.pluralsight.com/paths/payment-card-industry-data-security-standard-pci-dss">PCI DSS Complience</a></li>
+</ul>
+<h2 id="entendendo-as-entidades">Entendendo as entidades</h2>
+<p>O IAM possui 4 entidades de gerenciamento, são elas:</p>
+<ul>
+<li>Usuários</li>
+<li>Grupos</li>
+<li>Roles/Funcões</li>
+<li>Policies/Políticas</li>
+</ul>
+<h2 id="usuário">Usuário</h2>
+<p>Usuário final. Geralmente pessoas que acessam sua conta e serviços da AWS.</p>
+<h2 id="grupos">Grupos</h2>
+<p>Coletivo de usuários. Todos usuários do grupo irão herdar as permissões daquele grupo.</p>
+<h2 id="rolesfuncões">Roles/Funcões</h2>
+<h2 id="policiespolíticas">Policies/Políticas</h2>
+<p>Documentos que especificam permissões em um serviço. São em formato JSON e podem ser adicionados a entidades acima.</p>
+<p>e.g</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+    <span style="color:#f92672">&#34;Version&#34;</span>: <span style="color:#e6db74">&#34;2012-10-17&#34;</span>,
+    <span style="color:#f92672">&#34;Statement&#34;</span>: [
+        {
+            <span style="color:#f92672">&#34;Effect&#34;</span>: <span style="color:#e6db74">&#34;Allow&#34;</span>,
+            <span style="color:#f92672">&#34;Action&#34;</span>: [
+                <span style="color:#e6db74">&#34;cognito-identity:Describe*&#34;</span>,
+                <span style="color:#e6db74">&#34;cognito-identity:Get*&#34;</span>
+            ],
+            <span style="color:#f92672">&#34;Resource&#34;</span>: <span style="color:#e6db74">&#34;*&#34;</span>
+        }
+    ]
+}
+</code></pre></div>
+    </section>
+</article>
+
+<footer id="post-meta" class="clearfix">
+    <a href="https://twitter.com/fernandosolivas">
+    <img class="avatar" src="https://fernandosoliva.com/images/avatar.png">
+    <div>
+        <span class="dark">Fernando Soliva</span>
+        <span>Fernando Soliva - Desenvolvedor de Software</span>
+    </div>
+    </a>
+    <section id="sharing">
+        <a class="twitter" href="https://twitter.com/intent/tweet?text=https%3a%2f%2ffernandosoliva.com%2fpost%2froad-to-aws-saa-iam%2f - Criando%20seu%20site%20em%205%20minutos%20e%20de%20gra%c3%a7a by @fernandosolivas"><span class="icon-twitter"> tweet</span></a>
+
+<a class="facebook" href="#" onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+      'facebook-share-dialog',
+      'width=626,height=436');
+    return false;"><span class="icon-facebook-rect"> Share</span>
+</a>
+
+    </section>
+</footer>
+
+
+
+<ul id="post-list" class="archive readmore">
+    <h3>Read more</h3>
+
+    
+    
+    
+        <li>
+            <a href="https://fernandosoliva.com/post/personal-site-5-minutes/">Criando seu site em 5 minutos e de graça<aside class="dates">Feb 29 2020</aside></a>
+        </li>
+    
+</ul>
+
+
+
+        <footer id="footer">
+    
+        <div id="social">
+
+	
+	
+    <a class="symbol" href="https://www.github.com/fernandosolivas">
+        <i class="fa fa-github"></i>
+    </a>
+    
+    <a class="symbol" href="https://www.linkedin.com/in/fernandosoliva/">
+        <i class="fa fa-linkedin"></i>
+    </a>
+    
+    <a class="symbol" href="https://dev.to/fernandosolivas">
+        <i class="fa fa-medium"></i>
+    </a>
+    
+    <a class="symbol" href="https://www.twitter.com/fernandosolivas">
+        <i class="fa fa-twitter"></i>
+    </a>
+    
+
+
+</div>
+
+    
+    <p class="small">
+    
+        © Copyright 2020 Fernando Soliva
+    
+    </p>
+</footer>
+
+    </section>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://fernandosoliva.com/js/main.js"></script>
+<script src="https://fernandosoliva.com/js/highlight.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+</body>
+</html>

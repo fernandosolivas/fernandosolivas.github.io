@@ -3,12 +3,27 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://fernandosoliva.com/categories/aws/</loc>
+    <lastmod>2020-02-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://fernandosoliva.com/categories/</loc>
     <lastmod>2020-02-29T00:00:00+00:00</lastmod>
   </url>
   
   <url>
+    <loc>https://fernandosoliva.com/categories/certifications/</loc>
+    <lastmod>2020-02-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://fernandosoliva.com/post/personal-site-5-minutes/</loc>
+    <lastmod>2020-02-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://fernandosoliva.com/post/road-to-aws-saa-iam/</loc>
     <lastmod>2020-02-29T00:00:00+00:00</lastmod>
   </url>
   
@@ -29,6 +44,11 @@
   
   <url>
     <loc>https://fernandosoliva.com/post/</loc>
+    <lastmod>2020-02-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://fernandosoliva.com/categories/solutions-architect/</loc>
     <lastmod>2020-02-29T00:00:00+00:00</lastmod>
   </url>
   

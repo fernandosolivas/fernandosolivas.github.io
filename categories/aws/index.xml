@@ -18,7 +18,8 @@
       
       <guid>https://fernandosoliva.com/post/road-to-aws-saa-iam/</guid>
       <description>Esse é o primeiro post da trilha de estudo que irei seguir até meu certificado da AWS de Solutions Architect Associate. São notas e explicações que espero me ajudar até o momento da prova e espero que ajude outras pessoas também!
-Identity and Access Management (IAM) O primeiro serviço de estudo é o Identity and Access Management (IAM). Este serviço prove interface para administração de: usuários (users), grupos (groups), funcões (roles) e políticas (policies) e tem as seguintes características:</description>
+Se você não está familiarizado com AWS, esses posts podem te deixar um pouco confuso. Aconselho primeiramente acessar o curso gratuito da AWS Cloud Practictioner
+Para realizar qualquer passo de criação de acesso a serviços, você primeiramente terá que criar uma conta na AWS e acessar a o console de gerenciamento.</description>
     </item>
     
   </channel>

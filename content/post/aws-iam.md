@@ -1,35 +1,42 @@
 +++
-title = "Caminho para certificação AWS Solutions Architect Associate - Pt.1"
-description = "Vamos aprender conceitos e realizar exercícios práticos de fixação."
+title = "Entendendo AWS - IAM"
+description = "Nesse post, iremos ver como criar e gerenciar usuários, grupos, funções e políticas de acesso da AWS"
 date = "2020-03-02"
 hidden = true
 categories = [
     "AWS",
     "solutions architect",
-    "certifications"
+    "certifications",
+    "iam"
 ]
 +++
 
-Esse é o primeiro post da trilha de estudo que irei seguir até meu certificado da AWS de Solutions Architect Associate. São notas e explicações que espero me ajudar até o momento da prova e espero que ajude outras pessoas também!
+Considere esse post, minhas notas para a certificação de Solutions Architect Solutions da AWS. 
+
+São notas e explicações que espero me ajudar e a outras pessoas também! A princípio serão posts dos principais serviços 
+utilizados na prova da certificação, então iremos começar pelo IAM.
 
 _Se você não está familiarizado com AWS, esses posts podem te deixar um pouco confuso. Aconselho primeiramente acessar o curso gratuito da [AWS Cloud Practictioner](https://aws.amazon.com/pt/training/course-descriptions/cloud-practitioner-essentials/)_
 
-Para realizar qualquer passo de criação de acesso a serviços, você primeiramente terá que criar uma conta na AWS e acessar a o console de gerenciamento.
+Para realizar qualquer passo de criação de acesso a serviços, você primeiramente terá que criar uma conta na AWS e acessar o console de gerenciamento.
 
-#### Identity and Access Management (IAM)
+## Identity and Access Management (IAM)
 
-O primeiro serviço de estudo é o Identity and Access Management (IAM). Este serviço prove interface para administração de: usuários, grupos, funcões e políticas e tem as seguintes características:
+O primeiro serviço de estudo é o [Identity and Access Management (IAM)](https://aws.amazon.com/pt/iam/). O IAM é um serviço de gerenciamento de acesso da sua conta AWS,
+permitindo com que você controle de forma mais granular todo os acessos feitos a sua conta, seja um usuário da sua conta, um terceiro ou uma aplicação.
 
-- Controle centralizado da sua conta AWS
-- Acesso compartilhado da sua conta AWs
+
+#### Principais Características
 - Permissões granulares
 - Federação de Identidade (Active Directory, Facebook, LinkedIn, etc.)
 - Autenticação Multi Fator (MFA)
+- Controle centralizado da sua conta AWS
+- Acesso compartilhado da sua conta AWs
 - Regras de rotação de senhas
 - Integração com muitos serviços da AWS
 - [PCI DSS Complience](https://www.pluralsight.com/paths/payment-card-industry-data-security-standard-pci-dss)
 
-## Entendendo as entidades
+#### Entendendo as entidades
 
 O IAM possui 4 entidades de gerenciamento, são elas:
 - Usuários
@@ -37,17 +44,17 @@ O IAM possui 4 entidades de gerenciamento, são elas:
 - Funcões
 - Políticas
 
-## Usuário
+#### Usuário
 Usuário final. Geralmente pessoas que acessam sua conta e serviços da AWS.
 
-## Grupos
+#### Grupos
 Coletivo de usuários. Todos usuários do grupo irão herdar as permissões daquele grupo.
 
-## Funcões
+#### Funcões
 Permite com que você delegue acesso a usuários ou serviços permitindo geração de credenciais temporárias para que você não precise compartilhar credenciais de longo prazo.
 
-## Políticas
-Documentos que especificam permissões em um serviço. São em formato JSON e podem ser adicionados a entidades acima.
+#### Políticas
+Documentos que especificam permissões de um ou mais serviços. São em formato JSON e podem ser adicionados usuários, roles e grupos.
 
 e.g
 ```json
@@ -66,7 +73,7 @@ e.g
 }
 ```
 
-#### Usuários
+## Usuários
 Como dito anteriormente, usuários são pessoas / aplicações que irão acessar seus recursos na AWS. Vamos criar nosso primeiro usuário! Primeiro vamos acessar o serviço IAM na AWS.
 
 ![iam-service-console](/IAM.png)
@@ -106,16 +113,16 @@ Vá até a aba *Credenciais de segurança* e no seção *Chaves de acesso* você
 
 Para redefinir senha, clique em _Gerenciar_ na opção *Senha de console*.
 
-## Acesso Programático
+#### Acesso Programático
 São credenciais de acesso para utilização da AWS CLI e/ou aplicações. É possível ter duas credenciais ativas por vez e sempre é possível expirar credenciais já existentes.
 
-## Acesso ao console de gerenciamento da AWS
+#### Acesso ao console de gerenciamento da AWS
 Diferente das credenciais de *Acesso Programático* essas informações servem para acesso através do console de gerenciamento da AWS. É possível forçar que o usuário altera a senha a qualquer momento.
 
 *As credenciais de _Acesso Programático_ e _Acesso ao console de gerenciamento da AWS_ são informações diferentes e elas não se substituem, logo, não é possível utilizar _Access Key_ e _Secret Key_ para logar via console e nem _email_ e _senha_ para utilizar em CLI e aplicações.
 
 
-#### Políticas
+## Políticas
 
 É possível também criar políticas customizadas. Vamos supor que eu queria que um usuário tenha somente acesso de leitura em um bucket chamado *road-to-saa* do [S3](https://aws.amazon.com/s3/) e escrita em todos os tópicos do [SNS](https://aws.amazon.com/sns).
 
@@ -147,7 +154,7 @@ Clique em _Filtrar políticas_ e selecione _Cliente gerenciado_. Irá retonar to
 
 Pronto! Temos nosso usuário com permissões limitadas de acesso em nosso bucket e no SNS. O mesmo pode ser feito para todos os outros recursos da AWS e usuários!
 
-#### Grupos
+## Grupos
 Com grupos, conseguimos contextualizar usuários em grupos de acesso. Por exemplo, adicionar os gerentes da sua empresa como administradores para que eles possam ter autonomia de gerenciar seus respectivos times, ou, criar um grupo de DevOps onde eles terão acesso ilimitado a stack da sua empresa, podendo desenvolver e operacionar sua infra de forma ágil. Podemos usar nossa imaginação e pensar em vários casos onde a divisão faça sentido.
 
 Assim como usuários, é possível definir políticas aos grupos e, obviamente, usuários.
@@ -164,7 +171,7 @@ Por fim clique em _Criar grupo_. Agora você será redirecionado para a home do 
 
 Pode ver que nessa mesma área, você consegue adicionar mais usuários ou remover usuários já existente nesses grupos.
 
-#### Funções
+## Funções
 Como dito anteriormente, você pode configurar funções para que terceiros tenham acesso a sua conta da AWS e a seus recursos.
 
 Existem 4 tipos de entidades de funções:
@@ -176,7 +183,7 @@ Existem 4 tipos de entidades de funções:
 
 O processo de adicionar políticas a funções é bem similar ao de adicionar à usuários, por isso não irei repetir os passos para ficarmos menos repetitivos.
 
-## Lembretes
+## Conclusão
 
 - IAM é global, ou seja, não tem região específica e um usuário, função, grupo ou política criado no IAM poderá acessar todas as regiões da AWS.
 - A conta "root" é a conta que foi criada a primeira vez. Essa conta tera acesso de Administrador completo (o famoso _God Mode_).

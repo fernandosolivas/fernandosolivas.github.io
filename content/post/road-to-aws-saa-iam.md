@@ -1,7 +1,7 @@
 +++
 title = "Caminho para certificação AWS Solutions Architect Associate - Pt.1"
 description = "Vamos aprender conceitos e realizar exercícios práticos de fixação."
-date = "2020-02-29"
+date = "2020-03-02"
 hidden = true
 categories = [
     "AWS",
@@ -66,12 +66,10 @@ e.g
 }
 ```
 
-**iremos passar detalhadamento por cada um das entidades e mostra a criação e as possibilidades de cada uma**.
-
 #### Usuários
 Como dito anteriormente, usuários são pessoas / aplicações que irão acessar seus recursos na AWS. Vamos criar nosso primeiro usuário! Primeiro vamos acessar o serviço IAM na AWS.
 
-![iam-service-console](/iam.png)
+![iam-service-console](/IAM.png)
 
 Dentro do console iremos selecionar *Usuários no menu lateral esquerdo* e em *Criar usuário*, até chegar na imagem abaixo.
 

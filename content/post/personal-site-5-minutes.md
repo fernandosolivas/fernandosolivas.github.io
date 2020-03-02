@@ -1,5 +1,5 @@
 +++
-title = "Criando seu pessoal em 5 minutos e de graça"
+title = "Criando seu site em 5 minutos e de graça"
 description = "Vamos utilizar o Hugo, framework de temas em Go."
 date = "2020-02-29"
 categories = [

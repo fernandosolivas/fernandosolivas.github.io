@@ -1,6 +1,6 @@
 +++
-title = "Entendendo AWS - IAM"
-description = "Nesse post, iremos ver como criar e gerenciar usuários, grupos, funções e políticas de acesso da AWS"
+title = "AWS Identity and Access Management"
+description = "Criação e gerenciamento de usuários, grupos, políticas e funções"
 date = "2020-03-02"
 hidden = true
 categories = [
@@ -11,15 +11,16 @@ categories = [
 ]
 +++
 
-Considere esse post, minhas notas para a certificação de Solutions Architect Solutions da AWS. 
+Considere esse post, minhas notas para a certificação de Solutions Architect Solutions da AWS.*
 
-São notas e explicações que espero me ajudar e a outras pessoas também! A princípio serão posts dos principais serviços 
-utilizados na prova da certificação, então iremos começar pelo IAM.
+São notas e explicações que espero me ajudar e a outras pessoas também enquanto estiver nesse processo! 
+A princípio serão posts dos principais serviços utilizados na prova da certificação, então iremos começar pelo IAM.
 
 _Se você não está familiarizado com AWS, esses posts podem te deixar um pouco confuso. Aconselho primeiramente acessar o curso gratuito da [AWS Cloud Practictioner](https://aws.amazon.com/pt/training/course-descriptions/cloud-practitioner-essentials/)_
 
 Para realizar qualquer passo de criação de acesso a serviços, você primeiramente terá que criar uma conta na AWS e acessar o console de gerenciamento.
 
+*_Não considere esse post como fonte da verdade. Haverão erros (espero que o mínimo possível) pois serão notas que pretendo revisar durante todo processo. Aceito feedbacks e correções através do email me@fernandosoliva.com_
 ## Identity and Access Management (IAM)
 
 O primeiro serviço de estudo é o [Identity and Access Management (IAM)](https://aws.amazon.com/pt/iam/). O IAM é um serviço de gerenciamento de acesso da sua conta AWS,
@@ -192,3 +193,4 @@ O processo de adicionar políticas a funções é bem similar ao de adicionar à
 - Access Key ID e Secret Access e Usuário e senha não são a mesma coisa. Não é possível utilizar Acess Key e Secret Access para acessar via console, assim como não é possível usar email e senha para realizar acesso programático.
 - Sempre crie MFA na sua conta root. (Lembre de realizar um backup seguro do seu QRCode).
 - Customize rotações de senhas e critérios para criação de senhas.
+- Utilize sempre controle fino das permissões. Seja menos permissivo sempre!

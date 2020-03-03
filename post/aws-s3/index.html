@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Fernando Soliva">
+
+<meta name="generator" content="Hugo 0.65.3" />
+<title>Entendendo AWS - S3</title>
+<link rel="shortcut icon" href="https://fernandosoliva.com/images/favicon.ico">
+<link rel="stylesheet" href="https://fernandosoliva.com/css/style.css">
+<link rel="stylesheet" href="https://fernandosoliva.com/css/highlight.css">
+
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+
+
+
+<link href="https://fernandosoliva.com/index.xml" rel="alternate" type="application/rss+xml" title="Fernando Soliva" />
+
+
+<meta property="og:title" content="Entendendo AWS - S3" />
+<meta property="og:description" content="Nesse post, cobrir as propriedades do serviço S3." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://fernandosoliva.com/post/aws-s3/" />
+<meta property="article:published_time" content="2020-03-02T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-03-02T00:00:00+00:00" />
+
+
+<meta itemprop="name" content="Entendendo AWS - S3">
+<meta itemprop="description" content="Nesse post, cobrir as propriedades do serviço S3.">
+<meta itemprop="datePublished" content="2020-03-02T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2020-03-02T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="255">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Entendendo AWS - S3"/>
+<meta name="twitter:description" content="Nesse post, cobrir as propriedades do serviço S3."/>
+<meta name="twitter:site" content="@https://www.twitter.com/fernandosolivas"/>
+
+
+    </head>
+<body>
+    <nav class="main-nav">
+	
+		<a href='https://fernandosoliva.com'> <span class="arrow">←</span>Home</a>
+	
+
+	
+ 		<a href='/about/'>Sobre</a>
+  	
+
+	
+		<a class="cta" href="https://fernandosoliva.com/index.xml">Subscribe</a>
+	
+</nav>
+
+    <section id="wrapper">
+        
+        
+<article class="post">
+    <header>
+        <h1>Entendendo AWS - S3</h1>
+        <h2 class="subtitle">Nesse post, cobrir as propriedades do serviço S3.</h2>
+        <h2 class="headline">
+        March 2, 2020
+        <br>
+        
+        </h2>
+    </header>
+    <section id="post-body">
+        <p>Considere esse post, minhas notas para a certificação de Solutions Architect Solutions da AWS.*</p>
+<p>Iremos cobrir um dos serviços mais antigos da AWS, o Simple Storage Service (S3). S3 é um serviço object-storage, ou seja, permite que você gerencie arquivos, entre outras características.</p>
+<p>*<em>Não considere esse post como fonte da verdade. Haverão erros (espero que o mínimo possível) pois serão notas que pretendo revisar durante todo processo. Aceito feedbacks e correções através do email me@fernandosoliva.com</em></p>
+<h2 id="características-base">Características base</h2>
+<ul>
+<li>S3 é baseado em objetos (arquivos)</li>
+<li>Arquivos podem ser de 0 bytes a 5TB</li>
+<li>O armazenamento é ilimitado</li>
+<li>Arquivos são armazenado em Buckets*</li>
+<li>Bucket é um namespace universal, logo ele precisa ser único na AWS</li>
+<li>Ao realizar o upload de um arquivo, a resposta do S3 é um estado HTTP 200</li>
+<li>Disponibilidade garantida de 99,99%</li>
+<li>Garantia de durabilidade de 99,9999999999% (11 x 9s)</li>
+<li>Camada de armazenamento disponível (Tiered Storage)</li>
+<li>Gerenciamento de ciclo de vida</li>
+<li>Versionamento</li>
+<li>Encriptação</li>
+<li>MFA para deleção de recursos</li>
+<li>Proteção de dados através de lista de controle de acessos (ACL) e Políticas de Bucket</li>
+</ul>
+<h4 id="objetos">Objetos</h4>
+<p>Objetos são arquivos e consite em: chave, valor, identificador de versão, metadados e subrecursos (Access Control List, Torrent). A chave é o nome do arquivo e o valor é o conteúdo, uma sequência de bytes.</p>
+<h4 id="consistência-dos-dados">Consistência dos dados</h4>
+<ul>
+<li>Leitura imediata depois de escrita para novos objetos</li>
+<li>Consistência eventual para sobrescrita e deleção de arquivos. Pode demorar um pouco para propagar a alteração realizada.</li>
+</ul>
+<h2 id="tipos-de-armazenamentohttpsawsamazoncoms3storage-classes"><a href="https://aws.amazon.com/s3/storage-classes/">Tipos de armazenamento</a></h2>
+<ul>
+<li>Standard</li>
+<li>Intelligent-Tiering</li>
+<li>Standard-IA</li>
+<li>One Zone-IA</li>
+<li>Glacier</li>
+<li>Glacier Deep Archive</li>
+</ul>
+<p><img src="/s3-chart.png" alt="chart">
+<em>Retirado de <a href="https://aws.amazon.com/s3/storage-classes/">https://aws.amazon.com/s3/storage-classes/</a> seção Performance Chart</em></p>
+
+    </section>
+</article>
+
+<footer id="post-meta" class="clearfix">
+    <a href="https://twitter.com/fernandosolivas">
+    <img class="avatar" src="https://fernandosoliva.com/images/avatar.png">
+    <div>
+        <span class="dark">Fernando Soliva</span>
+        <span>Fernando Soliva - Desenvolvedor de Software</span>
+    </div>
+    </a>
+    <section id="sharing">
+        <a class="twitter" href="https://twitter.com/intent/tweet?text=https%3a%2f%2ffernandosoliva.com%2fpost%2faws-s3%2f - Entendendo%20AWS%20-%20S3 by @fernandosolivas"><span class="icon-twitter"> tweet</span></a>
+
+<a class="facebook" href="#" onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+      'facebook-share-dialog',
+      'width=626,height=436');
+    return false;"><span class="icon-facebook-rect"> Share</span>
+</a>
+
+    </section>
+</footer>
+
+
+
+<ul id="post-list" class="archive readmore">
+    <h3>Read more</h3>
+
+    
+    
+    
+        <li>
+            <a href="https://fernandosoliva.com/post/aws-iam/">AWS Identity and Access Management<aside class="dates">Mar 2 2020</aside></a>
+        </li>
+    
+        <li>
+            <a href="https://fernandosoliva.com/post/personal-site-5-minutes/">Criando seu site em 5 minutos e de graça<aside class="dates">Feb 29 2020</aside></a>
+        </li>
+    
+</ul>
+
+
+
+        <footer id="footer">
+    
+        <div id="social">
+
+	
+	
+    <a class="symbol" href="https://www.github.com/fernandosolivas">
+        <i class="fa fa-github"></i>
+    </a>
+    
+    <a class="symbol" href="https://www.linkedin.com/in/fernandosoliva/">
+        <i class="fa fa-linkedin"></i>
+    </a>
+    
+    <a class="symbol" href="https://dev.to/fernandosolivas">
+        <i class="fa fa-medium"></i>
+    </a>
+    
+    <a class="symbol" href="https://www.twitter.com/fernandosolivas">
+        <i class="fa fa-twitter"></i>
+    </a>
+    
+
+
+</div>
+
+    
+    <p class="small">
+    
+        © Copyright 2020 Fernando Soliva
+    
+    </p>
+</footer>
+
+    </section>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://fernandosoliva.com/js/main.js"></script>
+<script src="https://fernandosoliva.com/js/highlight.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+</body>
+</html>

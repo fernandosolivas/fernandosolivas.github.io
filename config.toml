@@ -9,7 +9,7 @@ theme = "hugo-cactus-theme"
 	bio = "Software Developer - Go - K8S - Serverless"
 	# Enter optionally your twitter account
 	twitter = "fernandosolivas"
-	enableRSS = false
+	enableRSS = true
 
 	# Integrate Javascript files or stylesheets by adding the url to the external assets or by
 	# linking local files with their path relative to the static folder, e.g. "css/styles.css"
@@ -33,7 +33,7 @@ theme = "hugo-cactus-theme"
 	share = ""
 	# 404 page
 	title404 = "Pagina não encontrada"
-	subtitle404 = ""
+	subtitle404 = "Oops! Parece deixei essa página fora e talvez não tenha visto, me avisa? Meu e-mail é: me@fernandosoliva.com"
 
 	# Choose a font for the social icons in the footer. Either "mono-social" or "font-awesome"
 	iconFont = "font-awesome"

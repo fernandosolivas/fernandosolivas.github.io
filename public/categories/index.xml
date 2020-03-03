@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Fernando Soliva</title>
+    <link>https://fernandosoliva.com/categories/</link>
+    <description>Recent content in Categories on Fernando Soliva</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Mon, 02 Mar 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://fernandosoliva.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>AWS</title>
+      <link>https://fernandosoliva.com/categories/aws/</link>
+      <pubDate>Mon, 02 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://fernandosoliva.com/categories/aws/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>certifications</title>
+      <link>https://fernandosoliva.com/categories/certifications/</link>
+      <pubDate>Mon, 02 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://fernandosoliva.com/categories/certifications/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>solutions architect</title>
+      <link>https://fernandosoliva.com/categories/solutions-architect/</link>
+      <pubDate>Mon, 02 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://fernandosoliva.com/categories/solutions-architect/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Development</title>
+      <link>https://fernandosoliva.com/categories/development/</link>
+      <pubDate>Sat, 29 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://fernandosoliva.com/categories/development/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>golang</title>
+      <link>https://fernandosoliva.com/categories/golang/</link>
+      <pubDate>Sat, 29 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://fernandosoliva.com/categories/golang/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

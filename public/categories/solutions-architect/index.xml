@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>solutions architect on Fernando Soliva</title>
+    <link>https://fernandosoliva.com/categories/solutions-architect/</link>
+    <description>Recent content in solutions architect on Fernando Soliva</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Mon, 02 Mar 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://fernandosoliva.com/categories/solutions-architect/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Caminho para certificação AWS Solutions Architect Associate - Pt.1</title>
+      <link>https://fernandosoliva.com/post/road-to-aws-saa-iam/</link>
+      <pubDate>Mon, 02 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://fernandosoliva.com/post/road-to-aws-saa-iam/</guid>
+      <description>Esse é o primeiro post da trilha de estudo que irei seguir até meu certificado da AWS de Solutions Architect Associate. São notas e explicações que espero me ajudar até o momento da prova e espero que ajude outras pessoas também!
+Se você não está familiarizado com AWS, esses posts podem te deixar um pouco confuso. Aconselho primeiramente acessar o curso gratuito da AWS Cloud Practictioner
+Para realizar qualquer passo de criação de acesso a serviços, você primeiramente terá que criar uma conta na AWS e acessar a o console de gerenciamento.</description>
+    </item>
+    
+  </channel>
+</rss>

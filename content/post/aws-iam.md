@@ -11,7 +11,7 @@ categories = [
 ]
 +++
 
-Considere esse post, minhas notas para a certificação de Solutions Architect Solutions da AWS.*
+Considere esse post, minhas notas para a certificação de Solutions Architect Associate da AWS.*
 
 São notas e explicações que espero me ajudar e a outras pessoas também enquanto estiver nesse processo! 
 A princípio serão posts dos principais serviços utilizados na prova da certificação, então iremos começar pelo IAM.

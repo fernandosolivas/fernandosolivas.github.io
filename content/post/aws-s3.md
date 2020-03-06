@@ -1,5 +1,5 @@
 +++
-title = "Entendendo AWS - S3 (WIP)"
+title = "AWS Simple Storage Service (S3) (WIP)"
 description = "Nesse post, cobrir as propriedades do serviço S3."
 date = "2020-03-06"
 hidden = true

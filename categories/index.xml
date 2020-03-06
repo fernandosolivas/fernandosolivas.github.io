@@ -6,7 +6,7 @@
     <description>Recent content in Categories on Fernando Soliva</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Mon, 02 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 06 Mar 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://fernandosoliva.com/categories/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>AWS</title>
       <link>https://fernandosoliva.com/categories/aws/</link>
-      <pubDate>Mon, 02 Mar 2020 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 06 Mar 2020 00:00:00 +0000</pubDate>
       
       <guid>https://fernandosoliva.com/categories/aws/</guid>
       <description></description>
@@ -23,9 +23,27 @@
     <item>
       <title>certifications</title>
       <link>https://fernandosoliva.com/categories/certifications/</link>
-      <pubDate>Mon, 02 Mar 2020 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 06 Mar 2020 00:00:00 +0000</pubDate>
       
       <guid>https://fernandosoliva.com/categories/certifications/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>s3</title>
+      <link>https://fernandosoliva.com/categories/s3/</link>
+      <pubDate>Fri, 06 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://fernandosoliva.com/categories/s3/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>solutions architect</title>
+      <link>https://fernandosoliva.com/categories/solutions-architect/</link>
+      <pubDate>Fri, 06 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://fernandosoliva.com/categories/solutions-architect/</guid>
       <description></description>
     </item>
     
@@ -35,24 +53,6 @@
       <pubDate>Mon, 02 Mar 2020 00:00:00 +0000</pubDate>
       
       <guid>https://fernandosoliva.com/categories/iam/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>s3</title>
-      <link>https://fernandosoliva.com/categories/s3/</link>
-      <pubDate>Mon, 02 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://fernandosoliva.com/categories/s3/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>solutions architect</title>
-      <link>https://fernandosoliva.com/categories/solutions-architect/</link>
-      <pubDate>Mon, 02 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://fernandosoliva.com/categories/solutions-architect/</guid>
       <description></description>
     </item>
     

@@ -6,7 +6,7 @@ theme = "hugo-cactus-theme"
 [params]
 	name = "Fernando Soliva"
 	description = ""
-	bio = "Software Developer - Go - K8S - Serverless"
+	bio = "Software Developer - Go - Cloud Computing - Serverless - K8S"
 	# Enter optionally your twitter account
 	twitter = "fernandosolivas"
 	enableRSS = true

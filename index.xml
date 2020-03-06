@@ -6,10 +6,21 @@
     <description>Recent content on Fernando Soliva</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Mon, 02 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 06 Mar 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://fernandosoliva.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Entendendo AWS - S3 (WIP)</title>
+      <link>https://fernandosoliva.com/post/aws-s3/</link>
+      <pubDate>Fri, 06 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://fernandosoliva.com/post/aws-s3/</guid>
+      <description>Considere esse post, minhas notas para a certificação de Solutions Architect Solutions da AWS.*
+Iremos cobrir um dos serviços mais antigos da AWS, o Simple Storage Service (S3). S3 é um serviço object-storage, ou seja, permite que você gerencie arquivos, entre outras características.
+*Não considere esse post como fonte da verdade. Haverão erros (espero que o mínimo possível) pois serão notas que pretendo revisar durante todo processo. Aceito feedbacks e correções através do email me@fernandosoliva.</description>
+    </item>
     
     <item>
       <title>AWS Identity and Access Management</title>
@@ -20,17 +31,6 @@
       <description>Considere esse post, minhas notas para a certificação de Solutions Architect Associate da AWS.*
 São notas e explicações que espero me ajudar e a outras pessoas também enquanto estiver nesse processo! A princípio serão posts dos principais serviços utilizados na prova da certificação, então iremos começar pelo IAM.
 Se você não está familiarizado com AWS, esses posts podem te deixar um pouco confuso. Aconselho primeiramente acessar o curso gratuito da AWS Cloud Practictioner</description>
-    </item>
-    
-    <item>
-      <title>Entendendo AWS - S3</title>
-      <link>https://fernandosoliva.com/post/aws-s3/</link>
-      <pubDate>Mon, 02 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://fernandosoliva.com/post/aws-s3/</guid>
-      <description>Considere esse post, minhas notas para a certificação de Solutions Architect Solutions da AWS.*
-Iremos cobrir um dos serviços mais antigos da AWS, o Simple Storage Service (S3). S3 é um serviço object-storage, ou seja, permite que você gerencie arquivos, entre outras características.
-*Não considere esse post como fonte da verdade. Haverão erros (espero que o mínimo possível) pois serão notas que pretendo revisar durante todo processo. Aceito feedbacks e correções através do email me@fernandosoliva.</description>
     </item>
     
     <item>

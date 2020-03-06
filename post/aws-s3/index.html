@@ -7,7 +7,7 @@
 <meta name="author" content="Fernando Soliva">
 
 <meta name="generator" content="Hugo 0.65.3" />
-<title>Entendendo AWS - S3</title>
+<title>Entendendo AWS - S3 (WIP)</title>
 <link rel="shortcut icon" href="https://fernandosoliva.com/images/favicon.ico">
 <link rel="stylesheet" href="https://fernandosoliva.com/css/style.css">
 <link rel="stylesheet" href="https://fernandosoliva.com/css/highlight.css">
@@ -21,25 +21,25 @@
 <link href="https://fernandosoliva.com/index.xml" rel="alternate" type="application/rss+xml" title="Fernando Soliva" />
 
 
-<meta property="og:title" content="Entendendo AWS - S3" />
+<meta property="og:title" content="Entendendo AWS - S3 (WIP)" />
 <meta property="og:description" content="Nesse post, cobrir as propriedades do serviço S3." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://fernandosoliva.com/post/aws-s3/" />
-<meta property="article:published_time" content="2020-03-02T00:00:00+00:00" />
-<meta property="article:modified_time" content="2020-03-02T00:00:00+00:00" />
+<meta property="article:published_time" content="2020-03-06T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-03-06T00:00:00+00:00" />
 
 
-<meta itemprop="name" content="Entendendo AWS - S3">
+<meta itemprop="name" content="Entendendo AWS - S3 (WIP)">
 <meta itemprop="description" content="Nesse post, cobrir as propriedades do serviço S3.">
-<meta itemprop="datePublished" content="2020-03-02T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2020-03-02T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="255">
+<meta itemprop="datePublished" content="2020-03-06T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2020-03-06T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="2047">
 
 
 
 <meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Entendendo AWS - S3"/>
+<meta name="twitter:title" content="Entendendo AWS - S3 (WIP)"/>
 <meta name="twitter:description" content="Nesse post, cobrir as propriedades do serviço S3."/>
 <meta name="twitter:site" content="@https://www.twitter.com/fernandosolivas"/>
 
@@ -65,10 +65,10 @@
         
 <article class="post">
     <header>
-        <h1>Entendendo AWS - S3</h1>
+        <h1>Entendendo AWS - S3 (WIP)</h1>
         <h2 class="subtitle">Nesse post, cobrir as propriedades do serviço S3.</h2>
         <h2 class="headline">
-        March 2, 2020
+        March 6, 2020
         <br>
         
         </h2>
@@ -103,15 +103,81 @@
 </ul>
 <h2 id="tipos-de-armazenamentohttpsawsamazoncoms3storage-classes"><a href="https://aws.amazon.com/s3/storage-classes/">Tipos de armazenamento</a></h2>
 <ul>
-<li>Standard</li>
-<li>Intelligent-Tiering</li>
-<li>Standard-IA</li>
-<li>One Zone-IA</li>
+<li>Padrão</li>
+<li>Divisão Inteligente em Camadas</li>
+<li>Padrão - Acesso infrequente</li>
+<li>Uma zona - Acesso infrequente</li>
 <li>Glacier</li>
 <li>Glacier Deep Archive</li>
+<li>Redundância Reduzida</li>
 </ul>
-<p><img src="/s3-chart.png" alt="chart">
+<p>Abaixo as características e preços de cada categoria do S3</p>
+<p><img src="/s3-storage-category.png" alt="price-chart">
+<img src="/s3-chart.png" alt="chart">
 <em>Retirado de <a href="https://aws.amazon.com/s3/storage-classes/">https://aws.amazon.com/s3/storage-classes/</a> seção Performance Chart</em></p>
+<h2 id="padrão">Padrão</h2>
+<p>&ldquo;<em>O S3 Standard oferece um armazenamento de objetos com altos níveis de resiliência, disponibilidade e performance para dados acessados com frequência. Como fornece baixa latência e alto throughput, o S3 Standard é adequado para uma grande variedade de casos de uso, como aplicativos na nuvem, sites dinâmicos, distribuição de conteúdo, aplicativos móveis e de jogos e dados analíticos de big data. As classes de armazenamento S3 podem ser configuradas no nível do objeto, e um único bucket pode conter objetos armazenados no S3 Standard, S3 Intelligent-Tiering, S3 Standard-IA e no S3 One Zone-IA. Você também pode usar as políticas de ciclo de vida do S3 para migrar automaticamente objetos entre classes de armazenamento sem nenhuma alteração nos aplicativos.</em>&rdquo; - Documentação AWS S3, seção <a href="https://aws.amazon.com/pt/s3/storage-classes/"><em>S3 Standard</em></a></p>
+<h2 id="divisão-inteligente-em-camadas">Divisão Inteligente em Camadas</h2>
+<p>&ldquo;<em>A classe de armazenamento S3 Intelligent-Tiering foi projetada para otimizar os custos movendo automaticamente os dados para o nível de acesso mais econômico, sem impacto na performance ou sobrecarga operacional. Ela funciona a partir do armazenamento de objetos em dois níveis de acesso: um nível é otimizado para acesso frequente e outro nível de custo mais baixo, que é otimizado para acesso infrequente. Por uma pequena taxa mensal de automação e monitoramento por objeto, o Amazon S3 monitora os padrões de acesso dos objetos no S3 Intelligent-Tiering e move aqueles que não foram acessados por 30 dias consecutivos para o nível de acesso infrequente. Se um objeto no nível de acesso infrequente for acessado, ele será automaticamente movido de volta para o nível de acesso frequente. Não há taxas de recuperação ao usar a classe de armazenamento S3 Intelligent-Tiering e não há taxas de níveis adicionais quando os objetos são movidos entre níveis de acesso. É a classe de armazenamento ideal para dados duradouros com padrões de acesso desconhecidos ou imprevisíveis. As classes de armazenamento S3 podem ser configuradas no nível do objeto, e um único bucket pode conter objetos armazenados no S3 Standard, S3 Intelligent-Tiering, S3 Standard-IA e no S3 One Zone-IA. Você pode fazer upload de objetos diretamente ao S3 Intelligent-Tiering ou usar as políticas de ciclo de vida do S3 para transferir objetos do S3 Standard e do S3 Standard-IA para o S3 Intelligent-Tiering. Também é possível arquivar objetos do S3 Intelligent-Tiering no S3 Glacier.</em>&rdquo; - Documentação AWS S3, seção <a href="https://aws.amazon.com/pt/s3/storage-classes/"><em>S3 Intelligent-Tiering</em></a></p>
+<h2 id="padrão---acesso-infrequente">Padrão - Acesso infrequente</h2>
+<p>&ldquo;<em>O S3 Standard-IA é indicado para dados acessados com menos frequência, mas que exigem acesso rápido quando necessários. A categoria S3 Standard – IA oferece os altos níveis de resiliência e throughput e a baixa latência da categoria S3 Standard, com taxas reduzidas por GB de armazenamento e GB de recuperação. A combinação de baixo custo e alta performance tornam a classe S3 Standard-IA ideal para armazenamento de longa duração, backups e datastores para arquivos de recuperação de desastres. As classes de armazenamento S3 podem ser configuradas no nível do objeto, e um único bucket pode conter objetos armazenados no S3 Standard, S3 Intelligent-Tiering, S3 Standard-IA e no S3 One Zone-IA. Você também pode usar as políticas de ciclo de vida do S3 para migrar automaticamente objetos entre classes de armazenamento sem nenhuma alteração nos aplicativos.</em>&rdquo; - Documentação AWS S3, seção <a href="https://aws.amazon.com/pt/s3/storage-classes/"><em>Acesso inefrequente</em></a></p>
+<h2 id="uma-zona---acesso-infrequente">Uma zona - Acesso infrequente</h2>
+<p>&ldquo;<em>O S3 One Zone-IA é indicado para dados acessados com menos frequência, mas que exigem acesso rápido quando necessários. Ao contrário de outras classes de armazenamento do S3, que armazenam dados em no mínimo três Zonas de disponibilidade (AZs), a S3 One Zone-IA armazena dados em uma única AZ, com um custo 20% inferior ao S3 Standard-IA. A classe S3 One Zone-IA é ideal para clientes que querem uma opção de menor custo para dados acessados com pouca frequência, mas não precisam da disponibilidade e da resiliência S3 Standard ou S3 Standard-IA. É uma ótima opção para armazenar cópias de backup secundária de dados locais ou que possam ser recriados com facilidade. Você também pode usar essa opção como um armazenamento barato para dados replicados de outra Região da AWS usando o replicador entre regiões do S3.</em></p>
+<p><em>A classe S3 OneZone-IA oferece os mesmos altos níveis de resiliência† e throughput e a baixa latência da classe S3 Standard, com taxas reduzidas por GB de armazenamento e GB de recuperação. As classes de armazenamento S3 podem ser configuradas no nível do objeto, e um único bucket pode conter objetos armazenados no S3 Standard, S3 Intelligent-Tiering, S3 Standard-IA e no S3 One Zone-IA. Você também pode usar as políticas de ciclo de vida do S3 para migrar automaticamente objetos entre classes de armazenamento sem nenhuma alteração nos aplicativos.</em>&rdquo; - Documentação AWS S3, seção <a href="https://aws.amazon.com/pt/s3/storage-classes/"><em>S3 One Zone-IA</em></a></p>
+<h2 id="glacier">Glacier</h2>
+<p><em>O S3 Glacier é uma classe de armazenamento segura, durável e de baixo custo para arquivamento de dados. Você pode armazenar com confiabilidade qualquer volume de dados a um custo competitivo ou inferior ao custo de soluções no local. Para manter os custos baixos, mas com condições de suprir necessidades variáveis, o S3 Glacier disponibiliza três opções de recuperação, que podem levar de alguns minutos a várias horas. Você pode fazer upload de objetos diretamente ao S3 Glacier ou usar as políticas de ciclo de vida do S3 para transferir dados entre qualquer uma classe de armazenamento do S3 para dados ativos (S3 Standard, S3 Intelligent-Tiering, S3 Standard-IA e S3 One Zone-IA) e S3 Glacier. Para obter mais informações, <a href="https://aws.amazon.com/glacier/">acesse a página do Amazon S3 Glacier.</a></em> - Documentação AWS S3, seção <a href="https://aws.amazon.com/pt/s3/storage-classes/"><em>Glacier</em></a></p>
+<h2 id="glacier-deep-archive">Glacier Deep Archive</h2>
+<p><em>O S3 Glacier Deep Archive é a classe de armazenamento mais barata do Amazon S3 e oferece suporte à retenção e preservação digitais de longo prazo para dados que podem ser acessados uma ou duas vezes por ano. Essa classe é projetada para clientes que mantêm conjuntos de dados por 7 a 10 anos ou mais para cumprir requisitos de conformidade normativa, especialmente em setores altamente regulados como serviços financeiros, saúde e setores públicos. O S3 Glacier Deep Archive também pode ser usado para casos de uso de backup e recuperação de desastres, além de ser uma alternativa mais barata e fácil de gerenciar em comparação aos sistemas de fita magnética como bibliotecas locais ou serviços externos. O S3 Glacier Deep Archive complementa o Amazon S3 Glacier, o que é ideal para arquivamentos em que os dados são recuperados com frequência e alguns desses dados precisam estar disponíveis em minutos. Todos os objetos armazenados no S3 Glacier Deep Archive são replicados e armazenados em, pelo menos, três zonas de disponibilidade distribuídas geograficamente, protegidos por 99,999999999% de resiliência e podem ser restaurados em até 12 horas.</em> - Documentação AWS S3, seção <a href="https://aws.amazon.com/pt/s3/storage-classes/"><em>Glacier Deep Archive</em></a></p>
+<h4 id="segurança-e-encriptação">Segurança e Encriptação</h4>
+<p>Como mencionado anteriormente, os Buckets criados são por padrão <em>PRIVADOS</em> e você pode mudar o acesso a eles através de <em>Lista de Controle de Acesso</em>(ACL) e/ou <em>Políticas</em>.</p>
+<p>É possível também possível configurar logs de acesso ao Bucket. Esses logs podem ser mantidos na sua conta ou enviar para outras contas.</p>
+<h2 id="encriptação">Encriptação</h2>
+<p>Encriptação no S3 é feita ou do lado do servidor ou do lado do cliente. Em caso de encriptação do lado do cliente, ao realizar o upload de um arquivo, é necessário encriptar o conteúdo antes de realizar o envio do arquivo para o S3. No caso de encriptação no lado do servidor, a AWS irá encriptar o conteúdo do arquivo antes de salvá-lo no S3 e deixá-lo disponível para acesso e a encriptação é realizar com uma das três opções de chave de encriptação.</p>
+<ul>
+<li>Chaves Gerenciadas pelo S3 - <em>SSE-S3</em></li>
+<li>AWS Key Management Service (KMS)* - *SSE-KMS*</li>
+<li>Encriptação no lado do servidor com senha provida pelo cliente - <em>SSE-C</em>
+*KMS é um tema tratado na certificação de Segurança da AWS e por isso não utilizaremos ele neste momento.</li>
+</ul>
+<p>(EXERCICIOS)</p>
+<h4 id="versionamento">Versionamento</h4>
+<p>O versionamento no S3 tem as seguintes características:</p>
+<ul>
+<li>Guarda todas as versões de alteração do arquivo, incluindo todas as escritas e inclusive deleções.</li>
+<li>Uma vez habilitado, não pode ser desabilitado*. Você precisa excluir e criar um novo Bucket.</li>
+<li>Integração com Regras de Ciclo de Vida do S3.</li>
+<li>Possibilidade de adicionar MFA para deleção de arquivos como mais uma camada de segurança.</li>
+</ul>
+<p>*É possível suspender o versionamento, porém não desabilitar permanentemente.</p>
+<h4 id="gerenciamento-de-ciclo-de-vida">Gerenciamento de Ciclo de Vida</h4>
+<p>Essa funcionalidade do S3 tem como objetivo transferir arquivos do seu Bucket para outras camadas do serviço (Padrão, Divisão Inteligente em Cadas, &hellip;) de forma automatizada conforme critérios que você define.</p>
+<p>Não é obrigatório ter o <em>Versionamento</em> habilitado, porém com o versionamento habilitado é possível realizar ações em versões anteriores também.</p>
+<h4 id="compartilhamento-de-bucket-entre-contas">Compartilhamento de Bucket entre Contas</h4>
+<p>Existem 3 formas de compartilhar Buckets através de contas:</p>
+<ul>
+<li>Utilizando Políticas de Bucket &amp; IAM (esse meio é aplicável a todo Bucket). Só é possível fazer através de <em>Acesso Programático</em></li>
+<li>Utilizando Lista de Controle de Acesso do Bucket &amp; IAM (esse meio é aplicável a objetos individuais). Só é possível fazer através de <em>Acesso Programático</em></li>
+<li>E Funções IAM Entre Contas. É possível fazer através de <em>Acesso Progrmático</em> e <em>Console de Gerenciamento AWS</em></li>
+</ul>
+<h4 id="replicação-entre-regiões">Replicação entre Regiões</h4>
+<p>Para habilitação dessa funcionalidade é necessário habilitar o <em>Versionamento</em> tanto no bucket de origem quanto no de destino. Arquivos já existentes antes da ativação da funcionalidade, não serão replicados entre as regiões, somente novos arquivos.</p>
+<p>Essa funcionalidade é utilizável quando você quer que regiões diferentes tenham acesso ao mesmo conteúdo com baixa latência. Porém só é possível replicar um Bucket para uma região. Algumas características dessa funcionalidade.</p>
+<ul>
+<li>O conteúdo de um bucket é replicado para uma outra região. Não é possível replicar para duas ou mais regiões.</li>
+<li>As regiões devem ser diferentes. Você não pode replicar da região de São Paulo para ela mesma.</li>
+<li>A replicação é feita a nível de arquivos.</li>
+<li>A marca de deleção <em>não</em> é replicada. Caso queira que o arquivo seja deletado das duas regiões, é preciso deletá-lo em ambas as regiões.</li>
+</ul>
+<h4 id="cloudfront">CloudFront</h4>
+<p>Cloud Front é uma ferramenta poderosa de CDN (Content Delivery Network). Uma CDN são servidores distribuídos geograficamente que entregam o conteúdo para o usuário baseado na posição geográfica, da origem do conteúdo e do servidor de conteúdo.</p>
+<p>Algumas características e funcionalidades:</p>
+<ul>
+<li><em>Edge Location</em> - Servidor onde o arquivo é cacheado. Não só é possível ler um arquivo como também escrever. <em>Edge Location</em> não são AZ/Regiões.</li>
+<li><em>Origin</em> - A origem de onde o arquivo será distribuído. Pode ser um Bucket do S3, uma instância de EC2, um LoadBalancer, um Route53 e outras possibilidades.</li>
+<li><em>Distribution</em> - É a abstração da CDN, ou seja, uma agrupamento de todas as <em>Edge Location</em>. Existem dois tipos de Distribution: Web Distribuition (Websites) e RTMP (Streaming de Midia).</li>
+<li>Arquivos são cacheados até o <a href="https://pt.wikipedia.org/wiki/Time_to_Live">TTL</a> expirar.</li>
+<li>É possível invalidar o cache do Edge Location, porém você será cobrado por esta ação.</li>
+</ul>
 
     </section>
 </article>
@@ -125,7 +191,7 @@
     </div>
     </a>
     <section id="sharing">
-        <a class="twitter" href="https://twitter.com/intent/tweet?text=https%3a%2f%2ffernandosoliva.com%2fpost%2faws-s3%2f - Entendendo%20AWS%20-%20S3 by @fernandosolivas"><span class="icon-twitter"> tweet</span></a>
+        <a class="twitter" href="https://twitter.com/intent/tweet?text=https%3a%2f%2ffernandosoliva.com%2fpost%2faws-s3%2f - Entendendo%20AWS%20-%20S3%20%28WIP%29 by @fernandosolivas"><span class="icon-twitter"> tweet</span></a>
 
 <a class="facebook" href="#" onclick="
     window.open(

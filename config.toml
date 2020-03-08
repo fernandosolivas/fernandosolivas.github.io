@@ -2,6 +2,8 @@ baseURL = "https://fernandosoliva.com"
 languageCode = "pt-br"
 title = "Fernando Soliva"
 theme = "hugo-cactus-theme"
+disqusShortName = "fernandosolivas"
+googleAnalytics = "UA-159908819-1"
 
 [params]
 	name = "Fernando Soliva"

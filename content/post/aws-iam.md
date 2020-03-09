@@ -20,7 +20,8 @@ _Se você não está familiarizado com AWS, esses posts podem te deixar um pouco
 
 Para realizar qualquer passo de criação de acesso a serviços, você primeiramente terá que criar uma conta na AWS e acessar o console de gerenciamento.
 
-*_Não considere esse post como fonte da verdade. Haverão erros (espero que o mínimo possível) pois serão notas que pretendo revisar durante todo processo. Aceito feedbacks e correções através do email me@fernandosoliva.com_
+*_Não considere esse post como f/onte da verdade. Haverão erros (espero que o mínimo possível) pois serão notas que pretendo revisar durante todo processo.
+Feedbacks e correções serão super bem vindas na seção de comentários abaixo._
 ## Identity and Access Management (IAM)
 
 O primeiro serviço de estudo é o [Identity and Access Management (IAM)](https://aws.amazon.com/pt/iam/). O IAM é um serviço de gerenciamento de acesso da sua conta AWS,

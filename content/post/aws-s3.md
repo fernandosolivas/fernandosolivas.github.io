@@ -1,6 +1,6 @@
 +++
 title = "AWS Simple Storage Service (S3)"
-description = "Nesse post, cobrir as propriedades do serviço S3."
+description = "Nesse post, vamos cobrir as propriedades do serviço S3."
 date = "2020-03-08"
 hidden = true
 categories = [

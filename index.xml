@@ -6,20 +6,21 @@
     <description>Recent content on Fernando Soliva</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Fri, 06 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 08 Mar 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://fernandosoliva.com/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>AWS Simple Storage Service (S3) (WIP)</title>
+      <title>AWS Simple Storage Service (S3)</title>
       <link>https://fernandosoliva.com/post/aws-s3/</link>
-      <pubDate>Fri, 06 Mar 2020 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 08 Mar 2020 00:00:00 +0000</pubDate>
       
       <guid>https://fernandosoliva.com/post/aws-s3/</guid>
       <description>Considere esse post, minhas notas para a certificação de Solutions Architect Solutions da AWS.*
 Iremos cobrir um dos serviços mais antigos da AWS, o Simple Storage Service (S3). S3 é um serviço object-storage, ou seja, permite que você gerencie arquivos, entre outras características.
-*Não considere esse post como fonte da verdade. Haverão erros (espero que o mínimo possível) pois serão notas que pretendo revisar durante todo processo. Aceito feedbacks e correções através do email me@fernandosoliva.</description>
+Não iremos passar por todos os aspectos do S3 e suas configurações e sim pelos principais tópicos dos simulados da certificação.
+*Não considere esse post como fonte da verdade.</description>
     </item>
     
     <item>
